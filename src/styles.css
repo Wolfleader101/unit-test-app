@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+h1 {
+    color: #f5b810;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 300%;
+  }
+
+form {
+    font-size: 150%;
+}
+
+
+  * {
+    font-family: Arial, Helvetica, sans-serif;
+  }

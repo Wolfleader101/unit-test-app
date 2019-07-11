@@ -1,1 +1,17 @@
-<input type="text">
+<form [formGroup]="userForm">
+  <fieldset>
+    <legend>Input User Details</legend>
+    <p><label class="field" for="Name">Name:</label><input type="text" placeholder="Submit name here"     formControlName="Name"><br></p>
+    <p><label class="field" for="Age">Age:</label><input type="number" placeholder="20"                   formControlName="Age"><br></p>
+    <p><label class="field" for="Gender">Gender:</label><select name="Gender"                             formControlName="Gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+    </select></p><br>
+    <p><label class="field" for="Email">Email:</label><input type="email" placeholder="Enter your email"  formControlName="Email"></p><br>
+    <p><label class="field" for="Password">Password:</label><input type="password" placeholder="Enter your password"                                             formControlName="Password"></p><br>
+    <p><label class="field" for="Date">Date:</label><input type="date"                                    formControlName="Date"><br></p>
+    <p><label class="field" for="File">File:</label><input type="file"                                    formControlName="File"><br></p>
+    <button type="submit" value="Submit" (click)="submit($event)">Submit</button>
+  </fieldset>
+</form>

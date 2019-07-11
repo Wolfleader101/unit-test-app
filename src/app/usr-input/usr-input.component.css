@@ -1,0 +1,17 @@
+fieldset{
+    display: block;
+    margin: 1.0em auto;
+    text-align: center;
+    width: 1000px;
+}
+label.field {
+    margin-left: 25%;
+    text-align: right;
+    width: 100px;
+    float: left;
+}
+
+input,select {
+    float: left;
+    margin-left: 10%;
+}
