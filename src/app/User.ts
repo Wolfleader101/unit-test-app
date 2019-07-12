@@ -13,8 +13,8 @@ export class UserCheck implements UserInfoInterface {
     UserEmail: string;
     UserPassword: string;
 
-    getInfo(name: string, age: number, gender: string, email: string) {
-        return {UserName: name, UserAge: age, UserGender: gender, UserEmail: email};
+    getInfo(name: string, age: number, gender: string, email: string, password: string) {
+        return {UserName: name, UserAge: age, UserGender: gender, UserEmail: email, UserPassword: password};
     }
 }
 

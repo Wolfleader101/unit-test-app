@@ -1,4 +1,4 @@
-<form [formGroup]="userForm">
+<form [formGroup]="userForm" method="POST" (ngSubmit)="submit()">
   <fieldset>
 
     <legend>Input User Details</legend>
@@ -11,7 +11,7 @@
     </select></p><br>
     <p><label class="field" for="Email">Email:</label><input type="email" placeholder="Enter your email"  formControlName="Email"></p><br>
     <p><label class="field" for="Password">Password:</label><input type="password" placeholder="Enter your password"  formControlName="Password"></p><br>
-    <button type="submit" value="Submit" (click)="submit($event)">Submit</button>
+    <button type="submit" value="Submit">Submit</button>
   </fieldset>
 </form>
 <div *ngIf="userForm.controls.Name.invalid && (userForm.controls.Name.dirty || userForm.controls.Name.touched || userForm.controls.Name.untouched || userForm.controls.Name.pristine)"
@@ -22,19 +22,25 @@
 </div>
 <div *ngIf="userForm.controls.Age.invalid && (userForm.controls.Age.dirty || userForm.controls.Age.touched || userForm.controls.Age.untouched || userForm.controls.Age.pristine)"
     class="alert alert-danger">
-<div *ngIf="userForm.controls.Name.errors">
+<div *ngIf="userForm.controls.Age.errors">
   Age is required.
 </div>
 </div>
 <div *ngIf="userForm.controls.Gender.invalid && (userForm.controls.Gender.dirty || userForm.controls.Gender.touched || userForm.controls.Gender.untouched || userForm.controls.Gender.pristine)"
     class="alert alert-danger">
-<div *ngIf="userForm.controls.Name.errors">
+<div *ngIf="userForm.controls.Gender.errors">
   Gender is required.
 </div>
 </div>
 <div *ngIf="userForm.controls.Email.invalid && (userForm.controls.Email.dirty || userForm.controls.Email.touched || userForm.controls.Email.untouched || userForm.controls.Email.pristine)"
     class="alert alert-danger">
-<div *ngIf="userForm.controls.Name.errors">
-  Email is required.
+<div *ngIf="userForm.controls.Email.errors">
+  Email is required following the format of user@user.com.
+</div>
+</div>
+<div *ngIf="userForm.controls.Password.invalid && (userForm.controls.Password.dirty || userForm.controls.Password.touched || userForm.controls.Password.untouched || userForm.controls.Password.pristine)"
+    class="alert alert-danger">
+<div *ngIf="userForm.controls.Password.errors">
+  Password is required with a required length of 8 characters.
 </div>
 </div>

@@ -7,6 +7,8 @@ import { UsrInputComponent } from './usr-input/usr-input.component';
 import { UserComponent } from './user/user.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { UserInfoComponent } from './user-info/user-info.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { UserInfoComponent } from './user-info/user-info.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
