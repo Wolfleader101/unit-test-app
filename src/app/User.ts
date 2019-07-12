@@ -4,8 +4,6 @@ export interface UserInfoInterface {
     UserGender: string;
     UserEmail: string;
     UserPassword: string;
-    UserDate: number;
-    UserFile: string;
 }
 
 export class UserCheck implements UserInfoInterface {
@@ -14,8 +12,6 @@ export class UserCheck implements UserInfoInterface {
     UserGender: string;
     UserEmail: string;
     UserPassword: string;
-    UserDate: number;
-    UserFile: string;
 
     getInfo(name: string, age: number, gender: string, email: string) {
         return {UserName: name, UserAge: age, UserGender: gender, UserEmail: email};
